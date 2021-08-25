@@ -3,7 +3,7 @@ import { firstContext } from '../../Store/store';
 import { Header } from '../../components';
 import { setFavoritePokemon } from '../../Store/actions/actionPokemon';
 import {AiFillStar,AiOutlineStar} from 'react-icons/ai';
-import { Tela } from './style';
+import { Image, Tela } from './style';
 
 
 const PokemonPage = ()=>{
@@ -13,6 +13,8 @@ const PokemonPage = ()=>{
     const [sprite,setSprite] = useState({url:'',name:''})
 
     const [star,setStar] = useState(()=> <AiOutlineStar/>)
+
+    const [image,SetImage] = useState('')
 
 
     const changeSprite =()=>{
@@ -55,6 +57,13 @@ const PokemonPage = ()=>{
 
 
     useEffect(()=>{
+        if (state.pokemon.id < 10){
+            SetImage(`https://raw.githubusercontent.com/HybridShivam/Pokemon/master/assets/images/00${state.pokemon.id}.png`)
+        }else if (state.pokemon.id <100){
+            SetImage(`https://raw.githubusercontent.com/HybridShivam/Pokemon/master/assets/images/0${state.pokemon.id}.png`)
+        }else{
+            SetImage(`https://raw.githubusercontent.com/HybridShivam/Pokemon/master/assets/images/${state.pokemon.id}.png`)
+        }
 
     },[state.pokemon])
 
@@ -71,6 +80,7 @@ const PokemonPage = ()=>{
                         <p >Tipo:{type.type.name}</p>
                     )
                 })}
+                <Image src={image} alt={state.pokemon.name} />
                 <img src={sprite.url} alt={state.pokemon.name} />
                 <button onClick={changeSprite}>{sprite.name}</button>
                 <button onClick ={()=>favorite(state.pokemon.id)}>{star}Favoritar</button>

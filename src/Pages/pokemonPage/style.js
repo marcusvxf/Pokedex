@@ -1,10 +1,4 @@
-import Slider from "react-slick";
 import styled from "styled-components";
-
-export const Carrousel = styled(Slider)`
-    width:45rem;
-    margin-left:3rem;
-`
 
 export const Tela = styled.div`
     display:flex;
@@ -12,11 +6,6 @@ export const Tela = styled.div`
 `
 
 export const Image = styled.img`
-    height:20rem;
-    &:hover{
-        border:3px solid black;
-        border-radius: 0.6rem;
-
-    }
+    height:10rem;
 `
 
