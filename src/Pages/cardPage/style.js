@@ -6,11 +6,6 @@ export const Carrousel = styled(Slider)`
     margin-left:3rem;
 `
 
-export const Tela = styled.div`
-    display:flex;
-    margin-left:3rem;
-`
-
 export const Image = styled.img`
     height:20rem;
     &:hover{
@@ -20,3 +15,24 @@ export const Image = styled.img`
     }
 `
 
+export const Constainer = styled.div`
+    margin-left:2rem;
+    margin-right:2rem;
+    margin-bottom:3rem;
+
+`
+
+export const Display = styled.div`
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: space-around;
+    overflow-y: scroll;
+    height:75vh;
+    width:95vw;
+    margin-left:2.4vw;
+    border:5px solid black;
+    border-radius:0.6rem;
+    background-color:white;
+    padding-top:1rem;
+
+`

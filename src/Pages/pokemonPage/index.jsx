@@ -16,6 +16,7 @@ const PokemonPage = ()=>{
 
     const [image,SetImage] = useState('')
 
+    const firstLetterUppercase=(arr) => arr.charAt(0).toUpperCase() + arr.slice(1)
 
     const changeSprite =()=>{
         sprite.name === 'Shiny' ?
@@ -46,7 +47,7 @@ const PokemonPage = ()=>{
 
     useEffect(()=>{
         let res = check(state.pokemon)
-        if(state.def){
+        if(state.def ){
             setSprite({url:state.pokemon.sprites.front_default,name:'Shiny'})}
         if(res){
             setStar(()=><AiOutlineStar/>)
@@ -72,25 +73,31 @@ const PokemonPage = ()=>{
         return (
         <Tela>
             <div>
-            <Header />
-                <p>Nome:{state.pokemon.name.replace('-',' ')}</p>
-                <p>index:{state.pokemon.id}</p>
+                <Header />
+                <h2>Nome:{state.pokemon.name.replace('-',' ')}</h2>
+                <h3>index:{state.pokemon.id}</h3>
                 {state.pokemon.types.map((type)=>{
                     return(
-                        <p >Tipo:{type.type.name}</p>
+                        <p>Tipo:{firstLetterUppercase(type.type.name)}</p>
                     )
                 })}
-                <Image src={image} alt={state.pokemon.name} />
-                <img src={sprite.url} alt={state.pokemon.name} />
-                <button onClick={changeSprite}>{sprite.name}</button>
-                <button onClick ={()=>favorite(state.pokemon.id)}>{star}Favoritar</button>
                 {state.pokemon.stats.map((info)=> { 
                     return( 
                     <div  key={info.stat.name}>
                     <p>{info.stat.name}</p>
                     <p>{info.base_stat}</p>
                     </div>)})}
+
             </div>
+            <div>
+                <Image src={image} alt={state.pokemon.name} />
+                <img src={sprite.url} alt={state.pokemon.name} />
+                <div>
+                    <button onClick={changeSprite}>{sprite.name}</button>
+                    <button onClick ={()=>favorite(state.pokemon.id)}>{star}Favoritar</button>
+                </div>
+            </div>
+
         </Tela>
         
     ) }
