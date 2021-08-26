@@ -8,10 +8,11 @@ export const Carrousel = styled(Slider)`
 
 export const Image = styled.img`
     height:20rem;
+    transition: transform .2s;
     &:hover{
-        border:3px solid black;
+ 
         border-radius: 0.6rem;
-
+        transform: scale(1.1);
     }
 `
 
@@ -19,6 +20,7 @@ export const Constainer = styled.div`
     margin-left:2rem;
     margin-right:2rem;
     margin-bottom:3rem;
+    display:inline-block
 
 `
 
@@ -34,5 +36,20 @@ export const Display = styled.div`
     border-radius:0.6rem;
     background-color:white;
     padding-top:1rem;
+
+`
+
+export const Title = styled.h2`
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 40px; 
+    font-weight: 1000; 
+    letter-spacing: 2px;
+    color:white;
+    margin:-2rem 0 1rem 2.4vw;
+    border:2px solid black;
+    width:12rem;
+    text-align:center;
+    border-radius: 2rem;
+    background-color:rgba(255, 140, 100, 1)
 
 `

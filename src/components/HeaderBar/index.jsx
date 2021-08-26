@@ -4,6 +4,7 @@ import {searchPoke, searchPokeCard} from '../../Store/actions/actionPokemon';
 import { useHistory } from 'react-router';
 import {AiFillStar,AiOutlineSearch} from 'react-icons/ai';
 import {Header,Button,SearchButton,Input,SearchBox} from './style'
+import { useLocation } from 'react-router-dom';
 
 
 
@@ -23,6 +24,8 @@ const HeaderBar = ()=>{
 
     const [pokename,setPokename] = useState('');
 
+    let location = useLocation()
+
 
     const changePokemon = (e)=>{
         if(e.key === 'Enter'){
@@ -34,7 +37,12 @@ const HeaderBar = ()=>{
         let pokeI = tratarEntrada(pokename)
         searchPoke(dispatch,pokeI)
         searchPokeCard(dispatch,pokeI)
-        history.push("/pokemon")
+        if(location.pathname === '/cartas'){
+            history.push("/cartas")
+        }else{
+            history.push("/pokemon")
+        }
+
     }
 
     const changePages = (page) =>{

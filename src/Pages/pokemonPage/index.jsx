@@ -71,9 +71,11 @@ const PokemonPage = ()=>{
 
     const pokeInfo = () => { 
         return (
+        <div>
+            <Header />
         <Tela>
             <div>
-                <Header />
+                
                 <h2>Nome:{state.pokemon.name.replace('-',' ')}</h2>
                 <h3>index:{state.pokemon.id}</h3>
                 {state.pokemon.types.map((type)=>{
@@ -99,6 +101,7 @@ const PokemonPage = ()=>{
             </div>
 
         </Tela>
+        </div>
         
     ) }
 

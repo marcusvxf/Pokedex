@@ -1,7 +1,7 @@
 import React,{useContext,useEffect} from 'react';
 import { firstContext } from '../../Store/store';
 import { searchPokeCard } from '../../Store/actions/actionPokemon';
-import { Image,Constainer, Display } from '../cardPage/style';
+import { Image,Constainer, Display, Title } from '../cardPage/style';
 import { Header } from '../../components';
 
 
@@ -28,7 +28,7 @@ const CardPage = () =>{
             <div>
                 <div>
                     <Header/>
-                    <h3>Cartas</h3>
+                    <Title>CARTAS</Title>
 
                 </div>
                 <Display>

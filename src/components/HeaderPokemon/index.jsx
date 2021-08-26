@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { firstContext } from '../../Store/store';
 import {  searchPoke } from '../../Store/actions/actionPokemon';
 import { useHistory } from 'react-router-dom';
+import { Container } from './style';
 
 
 const HeaderPokemon = ()=> {
@@ -37,7 +38,7 @@ const HeaderPokemon = ()=> {
     }
 
     return(
-        <>
+        <Container>
         <div>
             <button onClick={()=>next(-1)}>Numero {state.pokemon.id -1}</button>
             <button onClick={()=>next(1)}>Numero {state.pokemon.id +1}</button>
@@ -47,7 +48,7 @@ const HeaderPokemon = ()=> {
             <button href="#"  onClick={()=> changePages('cartas')}>cartas</button>
         </div>
 
-        </>
+        </ Container>
     )
 
 }
