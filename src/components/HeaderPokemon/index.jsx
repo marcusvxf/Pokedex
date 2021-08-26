@@ -1,7 +1,8 @@
 import React, { useContext } from 'react';
 import { firstContext } from '../../Store/store';
 import {  searchPoke } from '../../Store/actions/actionPokemon';
-import { Container } from './style';
+import { Container,Button, Buttonsbox ,Line } from './style';
+import {AiOutlineArrowRight,AiOutlineArrowLeft} from 'react-icons/ai';
 
 
 const HeaderPokemon = ()=> {
@@ -33,11 +34,12 @@ const HeaderPokemon = ()=> {
 
     return(
         <Container>
-        <div>
-            <button onClick={()=>next(-1)}>Numero {state.pokemon.id -1}</button>
-            <button onClick={()=>next(1)}>Numero {state.pokemon.id +1}</button>
-        </div>
+            <Buttonsbox>
+                <Button href='#' onClick={()=>next(-1)}><AiOutlineArrowLeft/> Numero {state.pokemon.id -1}</Button>
+                <Line></Line>
+                <Button href='#' onClick={()=>next(1)}>Numero {state.pokemon.id +1} <AiOutlineArrowRight/> </Button>
 
+            </Buttonsbox>
         </ Container>
     )
 

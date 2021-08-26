@@ -8,4 +8,7 @@ export const Tela = styled.div`
 export const Image = styled.img`
     height:10rem;
 `
-
+export const ButtonPage = styled.div`
+    display:flex;
+    justify-content:flex-end;
+`

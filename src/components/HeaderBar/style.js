@@ -34,15 +34,16 @@ export const Button = styled.a`
 
 export const SearchBox = styled.div`
     background:#fff;
-    border-radius:0.6rem;
+    border-radius:0.8rem;
+    display:flex;
     justify-content:center;
+    align-items:center;
 
 `
 
 
 export const SearchButton = styled.a`
     padding:0.8rem;
-    padding-bottom:0.65rem;
     color:black;
     background:orange;
     border-radius:0.6rem;

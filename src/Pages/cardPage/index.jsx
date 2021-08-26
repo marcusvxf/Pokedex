@@ -1,10 +1,11 @@
 import React,{useContext,useEffect} from 'react';
 import { firstContext } from '../../Store/store';
 import { searchPokeCard } from '../../Store/actions/actionPokemon';
-import { Image,Constainer, Display, Title ,HeaderCardPage, Button} from '../cardPage/style';
+import { Image,Constainer, Display, Title ,HeaderCardPage} from '../cardPage/style';
 import { Header } from '../../components';
 import {AiOutlineArrowRight} from 'react-icons/ai';
 import { useHistory } from 'react-router-dom';
+import { Button } from '../../components';
 
 
 
@@ -26,10 +27,6 @@ const CardPage = () =>{
         }
     },[state.pokemon])
 
-    function changePage(page){
-        history.push(`/${page}`)
-    }
-
     const cardInfo = ()=>{
         return(
 
@@ -38,7 +35,7 @@ const CardPage = () =>{
                     <Header/>
                     <HeaderCardPage>
                         <Title>CARTAS</Title>
-                        <Button href='#' onClick={()=>changePage('pokemon')}>ir Para Pokemon<AiOutlineArrowRight/></Button>
+                        <Button page='pokemon'>ir Para Pokemon<AiOutlineArrowRight/></Button>
                     </HeaderCardPage>
 
 
