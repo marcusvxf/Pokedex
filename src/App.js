@@ -14,7 +14,8 @@ import CardPage from './Pages/cardPage';
 
 const Backgorund = styled.div`
   background-color:rgba(162, 160, 168, 1);
-  height:100vh;
+  min-height:100vh;
+
 `
 const HeaderDiv = styled.div`
   padding-top:1rem;
