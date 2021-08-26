@@ -1,14 +1,12 @@
 import React, { useContext } from 'react';
 import { firstContext } from '../../Store/store';
 import {  searchPoke } from '../../Store/actions/actionPokemon';
-import { useHistory } from 'react-router-dom';
 import { Container } from './style';
 
 
 const HeaderPokemon = ()=> {
 
     const {state,dispatch} = useContext(firstContext)
-    let history = useHistory()
 
     const next = (i)=>{
         let id
@@ -33,19 +31,11 @@ const HeaderPokemon = ()=> {
         }
     }
 
-    const changePages = (page) =>{
-        history.push(`/${page}`)
-    }
-
     return(
         <Container>
         <div>
             <button onClick={()=>next(-1)}>Numero {state.pokemon.id -1}</button>
             <button onClick={()=>next(1)}>Numero {state.pokemon.id +1}</button>
-        </div>
-        <div>
-            <button href="#"  onClick={()=> changePages('pokemon')}>pokemon</button>
-            <button href="#"  onClick={()=> changePages('cartas')}>cartas</button>
         </div>
 
         </ Container>

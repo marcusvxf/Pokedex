@@ -4,6 +4,7 @@ import { Header } from '../../components';
 import { setFavoritePokemon } from '../../Store/actions/actionPokemon';
 import {AiFillStar,AiOutlineStar} from 'react-icons/ai';
 import { Image, Tela } from './style';
+import { useHistory } from 'react-router-dom';
 
 
 const PokemonPage = ()=>{
@@ -15,6 +16,7 @@ const PokemonPage = ()=>{
     const [star,setStar] = useState(()=> <AiOutlineStar/>)
 
     const [image,SetImage] = useState('')
+    let history = useHistory()
 
     const firstLetterUppercase=(arr) => arr.charAt(0).toUpperCase() + arr.slice(1)
 
@@ -68,6 +70,10 @@ const PokemonPage = ()=>{
 
     },[state.pokemon])
 
+    function changePage(page){
+        history.push(`/${page}`)
+    }
+
 
     const pokeInfo = () => { 
         return (
@@ -75,7 +81,7 @@ const PokemonPage = ()=>{
             <Header />
         <Tela>
             <div>
-                
+                <button onClick={() => changePage('cartas')}>Cartas</button>
                 <h2>Nome:{state.pokemon.name.replace('-',' ')}</h2>
                 <h3>index:{state.pokemon.id}</h3>
                 {state.pokemon.types.map((type)=>{
