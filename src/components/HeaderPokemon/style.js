@@ -12,7 +12,7 @@ export const Buttonsbox = styled.div`
     background-color:rgba(255, 140, 100, 1);
     display:flex;
     justify-content:center;
-    width:22rem;
+    width:20.5rem;
     border-radius:1rem;
 
 ` 

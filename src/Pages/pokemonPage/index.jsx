@@ -3,7 +3,7 @@ import { firstContext } from '../../Store/store';
 import { Header } from '../../components';
 import { setFavoritePokemon } from '../../Store/actions/actionPokemon';
 import {AiFillStar,AiOutlineStar,AiOutlineArrowRight} from 'react-icons/ai';
-import { Image, Tela ,ButtonPage } from './style';
+import { Image, Tela ,ButtonPage,Ball,Sprite, BallSprite,InfoDiv,Title, Id, FavoriteButtom, ShinyButtom,DivSprite} from './style';
 import { Button } from '../../components';
 
 
@@ -33,7 +33,6 @@ const PokemonPage = ()=>{
             }
         }
         return true
-
     }
 
     const favorite = (nome)=> {
@@ -59,6 +58,7 @@ const PokemonPage = ()=>{
 
 
     useEffect(()=>{
+        // SetImage(`https://img.pokemondb.net/artwork/large/altaria-mega.jpg`)
         if (state.pokemon.id < 10){
             SetImage(`https://raw.githubusercontent.com/HybridShivam/Pokemon/master/assets/images/00${state.pokemon.id}.png`)
         }else if (state.pokemon.id <100){
@@ -74,13 +74,13 @@ const PokemonPage = ()=>{
         <div>
             <Header />
             <ButtonPage>
+                <InfoDiv>
+                    <Title>Nome:{state.pokemon.name.replace('-',' ')} /  Index:{state.pokemon.id}</Title>
+                </InfoDiv>
                 <Button page='cartas'>ir Para Cartas<AiOutlineArrowRight/></Button>
             </ButtonPage>
             <Tela>
                 <div>
-                    
-                    <h2>Nome:{state.pokemon.name.replace('-',' ')}</h2>
-                    <h3>index:{state.pokemon.id}</h3>
                     {state.pokemon.types.map((type)=>{
                         return(
                             <p>Tipo:{firstLetterUppercase(type.type.name)}</p>
@@ -95,12 +95,17 @@ const PokemonPage = ()=>{
 
                 </div>
                 <div>
-                    <Image src={image} alt={state.pokemon.name} />
-                    <img src={sprite.url} alt={state.pokemon.name} />
-                    <div>
-                        <button onClick={changeSprite}>{sprite.name}</button>
-                        <button onClick ={()=>favorite(state.pokemon.id)}>{star}Favoritar</button>
-                    </div>
+                    <Ball>
+                        <Image src={image} alt={state.pokemon.name} />
+                        <FavoriteButtom href='#' onClick ={()=>favorite(state.pokemon.id)}>{star}Favoritar</FavoriteButtom>
+                    </Ball>
+                    <DivSprite>
+                        <BallSprite>
+                            <Sprite src={sprite.url} alt={state.pokemon.name} />
+                        </BallSprite>                        
+                        <ShinyButtom href='#' onClick={changeSprite}>{sprite.name}</ShinyButtom>
+                    </DivSprite>
+                    
                 </div>
 
             </Tela>
