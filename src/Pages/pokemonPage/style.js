@@ -24,7 +24,9 @@ export const Ball = styled.div`
     justify-content:center;
     align-items:center;
     text-align:center;
-    margin-right:10rem;
+    margin-right:38vw;
+
+
 `
 export const BallSprite = styled.div`
     display:flex;
@@ -34,6 +36,7 @@ export const BallSprite = styled.div`
     border-radius:50%;
     height:7rem;
     width:7rem;
+
 `
 
 export const Sprite = styled.img`
@@ -62,25 +65,6 @@ export const Title = styled.h2`
     height:2.8rem;
     text-transform:uppercase;
 `
-
-export const Id = styled.h2`
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-family: 'Helvetica Neue', sans-serif;
-    font-size: 20px; 
-    font-weight: 800; 
-    letter-spacing: 1px;
-    color:white;
-    margin:0rem 0 0.5rem 0;
-    border:2px solid black;
-    width:10rem;
-    border-radius: 2rem;
-    background-color:rgba(255, 140, 100, 1);
-    height:2.4rem;
-    text-transform:uppercase;
-
-` 
 
 export const FavoriteButtom = styled.a`
     text-decoration:none;
@@ -115,5 +99,13 @@ export const DivSprite = styled.div`
     flex-direction:column;
     justify-content:center;
     align-items:center;
-    margin-left:5rem;
+    margin-left:-15rem;
+`
+
+export const Status = styled.div`
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: space-between;
+    width:33vw;
+
 `

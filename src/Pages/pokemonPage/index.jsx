@@ -1,9 +1,9 @@
 import React ,{useContext, useEffect, useState} from 'react';
 import { firstContext } from '../../Store/store';
-import { Header } from '../../components';
+import { Bar, Header } from '../../components';
 import { setFavoritePokemon } from '../../Store/actions/actionPokemon';
 import {AiFillStar,AiOutlineStar,AiOutlineArrowRight} from 'react-icons/ai';
-import { Image, Tela ,ButtonPage,Ball,Sprite, BallSprite,InfoDiv,Title, Id, FavoriteButtom, ShinyButtom,DivSprite} from './style';
+import { Image, Tela ,ButtonPage,Ball,Sprite, BallSprite,InfoDiv,Title, Status, FavoriteButtom, ShinyButtom,DivSprite} from './style';
 import { Button } from '../../components';
 
 
@@ -33,6 +33,16 @@ const PokemonPage = ()=>{
             }
         }
         return true
+    }
+    
+    function configStatus(status){
+        if(status === 'special-attack'){
+            return "sp attack"
+        }else if(status === 'special-defense'){
+            return "sp defense"
+        }else{
+            return(status)
+        }
     }
 
     const favorite = (nome)=> {
@@ -86,12 +96,13 @@ const PokemonPage = ()=>{
                             <p>Tipo:{firstLetterUppercase(type.type.name)}</p>
                         )
                     })}
-                    {state.pokemon.stats.map((info)=> { 
+                    <Status>
+                        {state.pokemon.stats.map((info)=> { 
                         return( 
-                        <div  key={info.stat.name}>
-                        <p>{info.stat.name}</p>
-                        <p>{info.base_stat}</p>
-                        </div>)})}
+                        <Bar key={info.stat.name} status={configStatus(info.stat.name)} number={info.base_stat} />
+                        )})}
+
+                    </Status>
 
                 </div>
                 <div>

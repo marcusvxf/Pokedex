@@ -1,14 +1,24 @@
 import React, { useContext } from 'react';
 import { firstContext } from '../../Store/store';
+import { searchPoke,searchPokeCard } from '../../Store/actions/actionPokemon';
+import { useHistory } from 'react-router';
 
 const Favorite = ()=>{
 
-    const {state} = useContext(firstContext)
+    const {state,dispatch} = useContext(firstContext)
+    
+    let history = useHistory()
+
+    const searchPokemon = (pokeI) =>{
+        searchPoke(dispatch,pokeI)
+        searchPokeCard(dispatch,pokeI)
+        history.push("/pokemon")
+    }
 
     const pokemonCard = (pokemon) => {
 
         return(
-            <div key={pokemon.name}>
+            <div onClick={()=>searchPokemon(pokemon.id)} key={pokemon.name}>
                 <img src = {pokemon.sprites.front_default} alt={pokemon.name} />
                 <p>Nome:{pokemon.name.replace('-',' ')}</p>
                 <p>Index:{pokemon.id}</p>
