@@ -22,17 +22,16 @@ const DivBall = ()=>{
         }
         return true
     },[state.favorites])
-
+    
     
     useEffect(()=>{
-        let res = ()=>check(state.pokemon)
+        let res = check(state.pokemon)
         if(res){
             setStar(()=><AiOutlineStar/>)
         }else{
             setStar(()=><AiFillStar/>)
         }
     },[state,check])
-
 
     useEffect(()=>{
         // SetImage(`https://img.pokemondb.net/artwork/large/altaria-mega.jpg`)
