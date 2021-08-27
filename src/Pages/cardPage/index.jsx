@@ -56,7 +56,7 @@ const CardPage = () =>{
                                 })}
                         </>
                     
-                    :<h2>carregando cartas</h2>}
+                    :<h2>Carregando cartas</h2>}
                 </Display>
 
             </div>

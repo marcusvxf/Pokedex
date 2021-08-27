@@ -109,3 +109,19 @@ export const Status = styled.div`
     width:33vw;
 
 `
+
+export const TypeBox = styled.div`
+    font-family: 'Helvetica Neue', sans-serif;
+    text-align:start;
+    border-radius:3rem;
+    border: 2px solid black;
+
+    font-size:15px;
+    font-weight:bold;
+    width:10rem;
+    text-transform:uppercase;
+    background-color:rgba(255, 140, 100, 1);
+    color:white;
+    padding-left:20px;
+    margin-left:1rem;
+`

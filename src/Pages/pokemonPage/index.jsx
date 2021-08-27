@@ -3,7 +3,7 @@ import { firstContext } from '../../Store/store';
 import { Bar, Header } from '../../components';
 import { setFavoritePokemon } from '../../Store/actions/actionPokemon';
 import {AiFillStar,AiOutlineStar,AiOutlineArrowRight} from 'react-icons/ai';
-import { Image, Tela ,ButtonPage,Ball,Sprite, BallSprite,InfoDiv,Title, Status, FavoriteButtom, ShinyButtom,DivSprite} from './style';
+import { Image, Tela ,ButtonPage,Ball,Sprite, BallSprite,InfoDiv,Title, Status, FavoriteButtom, ShinyButtom,DivSprite, TypeBox} from './style';
 import { Button } from '../../components';
 
 
@@ -91,11 +91,15 @@ const PokemonPage = ()=>{
             </ButtonPage>
             <Tela>
                 <div>
+                    <TypeBox>
                     {state.pokemon.types.map((type)=>{
                         return(
-                            <p>Tipo:{firstLetterUppercase(type.type.name)}</p>
+                            <p>Tipo: {firstLetterUppercase(type.type.name)}</p>
                         )
                     })}
+
+                    </TypeBox>
+
                     <Status>
                         {state.pokemon.stats.map((info)=> { 
                         return( 
