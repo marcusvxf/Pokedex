@@ -28,8 +28,11 @@ const searchPokeCard = (dispatch,pokename) =>{
     }).catch((err)=> console.log('Erro',err))
 }
 
+
+
 export {
     searchPoke,
     setFavoritePokemon,
-    searchPokeCard
+    searchPokeCard,
+
 }

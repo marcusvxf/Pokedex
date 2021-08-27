@@ -11,6 +11,10 @@ const reducer = (state,action)=>{
             return {...state , cards: action.payload}
         case 'resetCard':
             return { ...state,cards: ''}
+        case 'removeFavorite':
+            state.favorites.splice(action.payload,1)
+            return { ...state,favorites: state.favorites}
+            //return { ...state,favorites: action.payload}
         default: 
             console.log("erro")
     }

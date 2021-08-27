@@ -8,7 +8,7 @@ Ola este um projeto pessoal utilizando:
 
 -Context api com useContext e useReducer
 
--styled-component
+-styled-components
 
 -Algumas images foram retiradas do repositorio de imagens do HybridShivam onde ele retira essas imagens da bulbapedia.
 

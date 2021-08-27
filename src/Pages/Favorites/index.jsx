@@ -2,6 +2,8 @@ import React, { useContext } from 'react';
 import { firstContext } from '../../Store/store';
 import { searchPoke,searchPokeCard } from '../../Store/actions/actionPokemon';
 import { useHistory } from 'react-router';
+import {Card} from '../../components'
+import { Display, Title } from './style';
 
 const Favorite = ()=>{
 
@@ -18,20 +20,18 @@ const Favorite = ()=>{
     const pokemonCard = (pokemon) => {
 
         return(
-            <div onClick={()=>searchPokemon(pokemon.id)} key={pokemon.name}>
-                <img src = {pokemon.sprites.front_default} alt={pokemon.name} />
-                <p>Nome:{pokemon.name.replace('-',' ')}</p>
-                <p>Index:{pokemon.id}</p>
-            </div>
+                <Card key={pokemon.name} src={pokemon.sprites.front_default} name={pokemon.name.replace('-',' ')} id={pokemon.id} ></Card>
         )
     }
 
     return(
         <>
-            <hr/>
-            <h1>Aqui estao seus pokemons Favoritos</h1>
-            <hr/>
-            {state.favorites.length > 0 ? state.favorites.map((pokemon)=> pokemonCard(pokemon)):<div>Nao salvou nada ainda</div>}
+
+            <Title>Pokemons Favoritos</Title>
+            <Display>
+                {state.favorites.length > 0 ? state.favorites.map((pokemon)=> pokemonCard(pokemon)):<div>Nao salvou nada ainda</div>}
+            </Display>
+            
 
         </>
     )
