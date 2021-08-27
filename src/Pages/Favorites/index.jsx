@@ -1,21 +1,12 @@
 import React, { useContext } from 'react';
 import { firstContext } from '../../Store/store';
-import { searchPoke,searchPokeCard } from '../../Store/actions/actionPokemon';
-import { useHistory } from 'react-router';
 import {Card} from '../../components'
 import { Display, Title } from './style';
 
 const Favorite = ()=>{
 
-    const {state,dispatch} = useContext(firstContext)
+    const {state} = useContext(firstContext)
     
-    let history = useHistory()
-
-    const searchPokemon = (pokeI) =>{
-        searchPoke(dispatch,pokeI)
-        searchPokeCard(dispatch,pokeI)
-        history.push("/pokemon")
-    }
 
     const pokemonCard = (pokemon) => {
 

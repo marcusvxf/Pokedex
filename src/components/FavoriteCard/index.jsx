@@ -29,7 +29,7 @@ const FavoiteCard = (props) =>{
         <Container >
             <div onClick={ () => searchPokemon(props.id)}>
                 <div>
-                    <img src={props.src} />            
+                    <img src={props.src} alt={props.name} />            
                 </div>
                 <div>
                     <Text>Nome: {props.name}</Text>

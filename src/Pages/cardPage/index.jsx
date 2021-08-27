@@ -4,7 +4,6 @@ import { searchPokeCard } from '../../Store/actions/actionPokemon';
 import { Image,Constainer, Display, Title ,HeaderCardPage} from '../cardPage/style';
 import { Header } from '../../components';
 import {AiOutlineArrowRight} from 'react-icons/ai';
-import { useHistory } from 'react-router-dom';
 import { Button } from '../../components';
 
 
@@ -12,8 +11,6 @@ import { Button } from '../../components';
 const CardPage = () =>{
 
     const {state,dispatch} = useContext(firstContext)
-
-    let history = useHistory()
 
     useEffect(()=>{
         dispatch({type:'resetCard'})
@@ -27,7 +24,7 @@ const CardPage = () =>{
                 searchPokeCard(dispatch,state.pokemon.name.replace('-',' ').split(" ")[0])
             }
         }
-    },[state.pokemon])
+    },[state.pokemon,dispatch])
 
     const cardInfo = ()=>{
         return(

@@ -14,7 +14,6 @@ const reducer = (state,action)=>{
         case 'removeFavorite':
             state.favorites.splice(action.payload,1)
             return { ...state,favorites: state.favorites}
-            //return { ...state,favorites: action.payload}
         default: 
             console.log("erro")
     }
