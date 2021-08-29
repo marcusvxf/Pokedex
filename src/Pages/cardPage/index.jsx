@@ -1,7 +1,7 @@
 import React,{useContext,useEffect} from 'react';
 import { firstContext } from '../../Store/store';
 import { searchPokeCard } from '../../Store/actions/actionPokemon';
-import { Image,Constainer, Display, Title ,HeaderCardPage} from '../cardPage/style';
+import { Image,Constainer, Display, Title ,HeaderCardPage, Nothing} from '../cardPage/style';
 import { Header, Loader } from '../../components';
 import {AiOutlineArrowRight} from 'react-icons/ai';
 import { Button } from '../../components';
@@ -20,6 +20,10 @@ const CardPage = () =>{
                 searchPokeCard(dispatch,`"${state.pokemon.name.replace('-',' ')}"`)
             }else if(state.pokemon.name.replace('-',' ').split(" ")[0] === 'mr'){
                 searchPokeCard(dispatch,`"${state.pokemon.name.replace('-',' ').split(" ")[0]}. ${state.pokemon.name.replace('-',' ').split(" ")[1]}"`)
+            }else if(state.pokemon.name === 'farfetchd'){
+                searchPokeCard(dispatch,`farfetch'd`)
+            }else if(state.pokemon.name === 'sirfetchd'){
+                searchPokeCard(dispatch,`sirfetch'd`)
             }else{
                 searchPokeCard(dispatch,state.pokemon.name.replace('-',' ').split(" ")[0])
             }
@@ -64,7 +68,7 @@ const CardPage = () =>{
 
     return(
         <>
-        {state.def === true ? cardInfo() : <div>Nemhum Card encontrado</div>}
+        {state.def === true ? cardInfo() : <Nothing>Nemhum Card encontrado, procure outro nome</Nothing>}
         </>
     )
 }

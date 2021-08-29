@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { firstContext } from '../../Store/store';
 import {Card} from '../../components'
-import { Display, Title } from './style';
+import { Display, Nothing, Title } from './style';
 
 const Favorite = ()=>{
 
@@ -20,7 +20,7 @@ const Favorite = ()=>{
 
             <Title>Pokemons Favoritos</Title>
             <Display>
-                {state.favorites.length > 0 ? state.favorites.map((pokemon)=> pokemonCard(pokemon)):<div>Nao salvou nada ainda</div>}
+                {state.favorites.length > 0 ? state.favorites.map((pokemon)=> pokemonCard(pokemon)):<Nothing> você Não salvou nada ainda, pesquise um nome ou numero.</Nothing>}
             </Display>
             
 

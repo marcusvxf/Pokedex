@@ -58,3 +58,16 @@ export const TypeBox = styled.div`
     padding-left:20px;
     margin-left:1rem;
 `
+
+export const Nothing = styled.div`
+    display:flex;
+    justify-content: center;
+    margin-top:30vh;
+    align-items:center;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-weight:800;
+    font-size:3rem;
+    text-transform:uppercase;
+    width:100vw
+
+`

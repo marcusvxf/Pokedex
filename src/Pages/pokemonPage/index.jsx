@@ -2,7 +2,7 @@ import React ,{useContext} from 'react';
 import { firstContext } from '../../Store/store';
 import { Ball, Bar, Header,Sprite } from '../../components';
 import {AiOutlineArrowRight} from 'react-icons/ai';
-import {Tela ,ButtonPage,InfoDiv,Title, Status, TypeBox} from './style';
+import {Tela ,ButtonPage,InfoDiv,Title, Status, TypeBox, Nothing} from './style';
 import { Button } from '../../components';
 
 
@@ -65,7 +65,7 @@ const PokemonPage = ()=>{
 
     return(
         <>
-        {state.def === true ? pokeInfo() : <div>Nemhum pokemon encontrado</div>}
+        {state.def === true ? pokeInfo() : <Nothing>Nemhum pokemon encontrado com esse nome.</Nothing>}
         </>
     )
 }

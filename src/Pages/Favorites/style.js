@@ -28,3 +28,16 @@ export const Title = styled.h2`
     background-color:rgba(255, 140, 100, 1);
 
 `
+
+export const Nothing = styled.div`
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-weight:800;
+    font-size:2rem;
+    text-transform:uppercase;
+    text-align:center;
+    width:100vw
+
+`

@@ -59,3 +59,17 @@ export const HeaderCardPage = styled.div`
     flex-wrap:wrap;
     justify-content:space-between;
 `
+
+export const Nothing = styled.div`
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-weight:800;
+    font-size:3rem;
+    text-transform:uppercase;
+    text-align:center;
+    width:100vw;
+    margin-top:30vh;
+
+`
