@@ -1,12 +1,14 @@
 import React  from 'react';
+import { SubTitle,Title,Container } from './style';
 
 
 const Home = () =>{
 
     return(
-        <>
-        <p>Ola Bem vindo a Pokedex</p>
-        </>
+        <Container>
+        <Title>Ola, Bem vindo a Pokedex</Title>
+        <SubTitle>este é um projeto feito por Marcusxf para aprendizado nele vc pode encontar informações de pokemon junto com suas cartas do tcg :p</SubTitle>
+        </Container>
 
     )
 

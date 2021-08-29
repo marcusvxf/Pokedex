@@ -10,6 +10,7 @@ export const Header = styled.div`
     flex-direction:row;
     padding-left:5rem;
     margin: 0rem 25vw 1rem 25vw;
+    border: 2px solid black;
 
 
 `
