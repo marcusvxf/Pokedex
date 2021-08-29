@@ -2,7 +2,7 @@ import React,{useContext,useEffect} from 'react';
 import { firstContext } from '../../Store/store';
 import { searchPokeCard } from '../../Store/actions/actionPokemon';
 import { Image,Constainer, Display, Title ,HeaderCardPage} from '../cardPage/style';
-import { Header } from '../../components';
+import { Header, Loader } from '../../components';
 import {AiOutlineArrowRight} from 'react-icons/ai';
 import { Button } from '../../components';
 
@@ -51,9 +51,10 @@ const CardPage = () =>{
                                         )
 
                                 })}
+                                
                         </>
                     
-                    :<h2>Carregando cartas</h2>}
+                    :<Loader/>}
                 </Display>
 
             </div>

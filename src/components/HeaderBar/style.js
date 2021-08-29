@@ -16,17 +16,21 @@ export const Header = styled.div`
 
 export const Button = styled.a`
     width:6.8rem;
+    display:flex;
+    align-items:center;
+    justify-content:center;
     margin: 0 2rem 0 0;
     text-decoration:none;
     color:#000;
-    font-size:1.3rem;
+    font-size:0.9rem;
     transition:0.5s;
     text-align:center;
     justify-content:center;
+    text-transform:uppercase;
     &:hover{
         color:#fff;
         background: grey;
-        border-radius: 2rem;
+        border-radius: 3rem;
         padding: 10px;
 
     }
@@ -42,15 +46,6 @@ export const SearchBox = styled.div`
 `
 
 
-export const SearchButton = styled.a`
-    padding:0.8rem;
-    color:black;
-    background:orange;
-    border-radius:0.6rem;
-
-
-`
-
 export const Input = styled.input`
     height:2.5rem;
     border-radius:0.6rem;
@@ -61,4 +56,9 @@ export const Input = styled.input`
     border:none;
     outline:none;
     font-size:1.3rem
+`
+
+export const Span = styled.h3`
+    font-family: 'Helvetica Neue', sans-serif;
+
 `

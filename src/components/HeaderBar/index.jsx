@@ -1,7 +1,7 @@
 import React  from 'react';
 import { useHistory } from 'react-router';
 import {AiFillStar} from 'react-icons/ai';
-import {Header,Button} from './style'
+import {Header,Button,Span} from './style'
 import { Search } from '../index';
 
 const HeaderBar = ()=>{
@@ -13,8 +13,8 @@ const HeaderBar = ()=>{
     }
     return(
         <Header>
-            <Button href='#' onClick={()=> changePages('Home')}><span>Home</span></Button>
-            <Button href="#"  onClick={()=> changePages('favorites')}><AiFillStar/><span>Favoritos</span></Button>
+            <Button href='#' onClick={()=> changePages('Home')}><Span>Home</Span></Button>
+            <Button href="#"  onClick={()=> changePages('favorites')}><AiFillStar/><Span>Favoritos</Span></Button>
             <Search />
         </Header>
     )

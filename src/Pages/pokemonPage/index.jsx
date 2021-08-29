@@ -59,7 +59,7 @@ const PokemonPage = ()=>{
                     <Sprite/>
                 </div>
             </Tela>
-        </div>
+        </div> 
         
     ) }
 
