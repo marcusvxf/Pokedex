@@ -31,9 +31,11 @@ const PokemonPage = ()=>{
         }else if(state.pokemon.name === 'minior-red-meteor'){
             setName('minior')
         }else{
-            setName(state.pokemon.name.replace('-',' '))
+            setName(state.pokemon.name)
         }
     },[state.pokemon])
+
+    // <Title>Nome:{name.replace('-',' ')} /  Index:{state.pokemon.id}</Title>
 
 
     const pokeInfo = () => { 
