@@ -28,8 +28,7 @@ const SearchBar = () => {
             poke = 'minior-red-meteor'
         }
 
-        //return poke.replace(' ','-')
-        return poke
+        return poke.replace(' ','-')
     }
 
 
