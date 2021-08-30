@@ -1,5 +1,5 @@
 # Projeto pokemon por Marcusvxf
-Você pode encontrar o site do projeto aqui https://dazzling-pasteur-83d6d7.netlify.app/.
+Você pode encontrar o projeto aqui https://dazzling-pasteur-83d6d7.netlify.app/.
 
 Ola este um projeto pessoal utilizando:
 
