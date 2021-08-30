@@ -48,13 +48,6 @@ const DivBall = ()=>{
                 SetImage(`https://img.pokemondb.net/artwork/large/${state.pokemon.name}.jpg`)
                 break
         }
-        //if (state.pokemon.id < 10){
-           // SetImage(`https://raw.githubusercontent.com/HybridShivam/Pokemon/master/assets/images/00${state.pokemon.id}.png`)
-        //}else if (state.pokemon.id <100){
-           // SetImage(`https://raw.githubusercontent.com/HybridShivam/Pokemon/master/assets/images/0${state.pokemon.id}.png`)
-       // }else{
-            //SetImage(`https://raw.githubusercontent.com/HybridShivam/Pokemon/master/assets/images/${state.pokemon.id}.png`)
-      //  }
 
     },[state.pokemon])
 

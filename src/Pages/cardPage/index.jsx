@@ -14,7 +14,7 @@ const CardPage = () =>{
 
     useEffect(()=>{
         dispatch({type:'resetCard'})
-        //Erros com nomes sirfetchd,
+
         if(state.pokemon !== 'inicial'){
             if(state.pokemon.name.replace('-',' ').split(" ")[0] === "tapu" || state.pokemon.name.replace('-',' ').split(" ")[0] === "mime"  ){
                 searchPokeCard(dispatch,`"${state.pokemon.name.replace('-',' ')}"`)
