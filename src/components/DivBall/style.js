@@ -30,6 +30,7 @@ export const FavoriteButtom = styled.a`
 `
 
 export const Image = styled.img`
-    height:15rem;
-    margin-bottom:1rem
+    margin-bottom:1rem;
+    max-height:15rem;
+    max-width:17rem;
 `
