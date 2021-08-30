@@ -42,11 +42,7 @@ const SearchBar = () => {
         let pokeI = tratarEntrada(pokename)
         searchPoke(dispatch,pokeI)
         searchPokeCard(dispatch,pokeI)
-        if(location.pathname === '/cartas'){
-            history.push("/cartas")
-        }else{
-            history.push("/pokemon")
-        }
+        history.push("/pokemon")
 
     }
 
