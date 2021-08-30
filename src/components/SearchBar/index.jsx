@@ -22,6 +22,12 @@ const SearchBar = () => {
         if(poke === ""){
             poke = 'none'
         }
+        if (poke === 'mimikyu'){
+            poke = 'mimikyu-disguised'
+        }else if(poke === 'minior'){
+            poke = 'minior-red-meteor'
+        }
+
         return poke.replace(' ','-')
     }
 

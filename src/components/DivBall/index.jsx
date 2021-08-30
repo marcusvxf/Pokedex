@@ -34,7 +34,20 @@ const DivBall = ()=>{
     },[state,check])
 
     useEffect(()=>{
-        SetImage(`https://img.pokemondb.net/artwork/large/${state.pokemon.name}.jpg`)
+        switch (state.pokemon.name){
+            case 'mimikyu-disguised':
+                SetImage(`https://img.pokemondb.net/artwork/large/mimikyu.jpg`)
+                break
+            case 'minior-red-meteor':
+                SetImage(`https://img.pokemondb.net/artwork/large/minior.jpg`)
+                break
+            case 'morpeko':
+                SetImage(`https://img.pokemondb.net/artwork/large/morpeko-full-belly.jpg`)
+                break
+            default:
+                SetImage(`https://img.pokemondb.net/artwork/large/${state.pokemon.name}.jpg`)
+                break
+        }
         //if (state.pokemon.id < 10){
            // SetImage(`https://raw.githubusercontent.com/HybridShivam/Pokemon/master/assets/images/00${state.pokemon.id}.png`)
         //}else if (state.pokemon.id <100){

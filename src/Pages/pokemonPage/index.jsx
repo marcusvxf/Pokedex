@@ -1,4 +1,4 @@
-import React ,{useContext} from 'react';
+import React ,{useContext, useEffect, useState} from 'react';
 import { firstContext } from '../../Store/store';
 import { Ball, Bar, Header,Sprite } from '../../components';
 import {AiOutlineArrowRight} from 'react-icons/ai';
@@ -10,6 +10,8 @@ const PokemonPage = ()=>{
     
     const {state} = useContext(firstContext)
 
+    const [name,setName]= useState('')
+ 
 
     const firstLetterUppercase=(arr) => arr.charAt(0).toUpperCase() + arr.slice(1)
 
@@ -23,6 +25,16 @@ const PokemonPage = ()=>{
         }
     }
 
+    useEffect(() => {
+        if (state.pokemon.name === 'mimikyu-disguised'){
+            setName('mimikyu')
+        }else if(state.pokemon.name === 'minior-red-meteor'){
+            setName('minior')
+        }else{
+            setName(state.pokemon.name)
+        }
+    },[state.pokemon])
+
 
     const pokeInfo = () => { 
         return (
@@ -30,7 +42,7 @@ const PokemonPage = ()=>{
             <Header />
             <ButtonPage>
                 <InfoDiv>
-                    <Title>Nome:{state.pokemon.name.replace('-',' ')} /  Index:{state.pokemon.id}</Title>
+                    <Title>Nome:{name.replace('-',' ')} /  Index:{state.pokemon.id}</Title>
                 </InfoDiv>
                 <Button page='cartas'>ir Para Cartas<AiOutlineArrowRight/></Button>
             </ButtonPage>

@@ -56,7 +56,7 @@ export const TypeBox = styled.div`
     background-color:rgba(255, 140, 100, 1);
     color:white;
     padding-left:20px;
-    margin-left:1rem;
+    margin-left:3rem;
 `
 
 export const Nothing = styled.div`

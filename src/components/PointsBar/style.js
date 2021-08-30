@@ -11,7 +11,7 @@ const barLoading =keyframes`
 
 export const Container = styled.div`
     display:inline-block;
-    margin-left:2rem
+    margin-left:2.1vw
 `
 
 
