@@ -2,7 +2,7 @@ import React,{useState,useContext}  from 'react';
 import { SearchBox,Input,SearchButton } from './style';
 import { firstContext } from '../../Store/store';
 import {AiOutlineSearch} from 'react-icons/ai';
-import { useHistory} from 'react-router-dom';
+import { useHistory,useLocation } from 'react-router-dom';
 import {searchPoke, searchPokeCard} from '../../Store/actions/actionPokemon';
 
 
@@ -15,7 +15,7 @@ const SearchBar = () => {
 
     let history = useHistory()
 
-    //let location = useLocation()
+    let location = useLocation()
 
     function tratarEntrada(poke){
         poke = poke.toLowerCase()
@@ -42,7 +42,11 @@ const SearchBar = () => {
         let pokeI = tratarEntrada(pokename)
         searchPoke(dispatch,pokeI)
         searchPokeCard(dispatch,pokeI)
-        history.push("/pokemon")
+        if(location.pathname === '/cartas'){
+            history.push("/cartas")
+        }else{
+            history.push("/pokemon")
+        }
 
     }
 
