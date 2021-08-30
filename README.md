@@ -13,4 +13,4 @@ Ola este um projeto pessoal utilizando:
 -Algumas images foram retiradas do site pokemon database.
 
 
-O projeto utiliza react apra criar uma "pokedex" com informações dos pokemons e mostrar suas cartas do Tcg,alem de dar a opção de favoritar pokemons.
+O projeto utiliza react pra criar uma "pokedex" com informações dos pokemons e mostrar suas cartas do Tcg,alem de dar a opção de favoritar pokemons.
