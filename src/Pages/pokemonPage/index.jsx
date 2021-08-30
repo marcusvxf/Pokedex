@@ -35,6 +35,8 @@ const PokemonPage = ()=>{
         }
     },[state.pokemon])
 
+    // <Title>Nome:{name.replace('-',' ')} /  Index:{state.pokemon.id}</Title>
+
 
     const pokeInfo = () => { 
         return (
@@ -42,7 +44,7 @@ const PokemonPage = ()=>{
             <Header />
             <ButtonPage>
                 <InfoDiv>
-                    <Title>Nome:{name.replace('-',' ')} /  Index:{state.pokemon.id}</Title>
+                    <Title>Nome:{name} /  Index:{state.pokemon.id}</Title>
                 </InfoDiv>
                 <Button page='cartas'>ir Para Cartas<AiOutlineArrowRight/></Button>
             </ButtonPage>
