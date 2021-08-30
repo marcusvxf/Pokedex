@@ -2,13 +2,13 @@
 
 Ola este um projeto pessoal utilizando:
 
--A api PokeApi e Pokemon Tcg API
+-A api PokeApi e Pokemon Tcg API;
 
--Axios
+-Axios;
 
--Context api com useContext e useReducer
+-Context api com useContext e useReducer;
 
--styled-components
+-styled-components;
 
 -Algumas images foram retiradas do site pokemon database.
 
