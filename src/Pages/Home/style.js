@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Theme from "../../theme";
 
 export const Container = styled.div`
     height:55vh;
@@ -9,13 +10,13 @@ export const Container = styled.div`
     align-items:center;
 
     h1{
-        font-family: 'Helvetica Neue', sans-serif;
+        font-family: ${Theme.fonts.regular};
         font-size:7rem;
         text-transform:uppercase;
     }
 
     h3{
-        font-family: 'Helvetica Neue', sans-serif;
+        font-family: ${Theme.fonts.regular};
         font-size:1.2rem;
         text-transform:uppercase;
         margin:-4rem;
