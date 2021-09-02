@@ -6,20 +6,20 @@ import { Text,Container, Button } from './style';
 
 
 const FavoiteCard = (props) =>{
-    let history = useHistory()
+    let history = useHistory();
 
-    const {state,dispatch} = useContext(firstContext)
+    const {state,dispatch} = useContext(firstContext);
 
     const searchPokemon = (pokeI) =>{
-        searchPoke(dispatch,pokeI)
-        searchPokeCard(dispatch,pokeI)
-        history.push("/pokemon")
+        searchPoke(dispatch,pokeI);
+        searchPokeCard(dispatch,pokeI);
+        history.push("/pokemon");
     }
 
     const remove = (index)=>{
         for( var x in state.favorites){
             if(index === state.favorites[x].id){
-                dispatch({type: 'removeFavorite',payload:x})
+                dispatch({type: 'removeFavorite',payload:x});
             }
         }
     }
@@ -32,16 +32,16 @@ const FavoiteCard = (props) =>{
                     <img src={props.src} alt={props.name} />            
                 </div>
                 <div>
-                    <Text>Nome: {props.name}</Text>
-                    <Text>Index : {props.id} </Text>  
+                    <h2>Nome: {props.name}</h2>
+                    <h2>Index : {props.id} </h2>  
                 </div>
 
             </div>
                 <Button href='#' onClick={() => remove(props.id)}>Excluir</Button>
 
         </Container>
-    )
+    );
 
 }
 
-export default FavoiteCard
+export default FavoiteCard;
