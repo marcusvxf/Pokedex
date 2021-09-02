@@ -18,7 +18,7 @@ export const SearchBox = styled.div`
         background:none;
         border:none;
         outline:none;
-        font-size:1.3rem
+        font-size:1.3rem;
     }
     button{
         padding:1rem;

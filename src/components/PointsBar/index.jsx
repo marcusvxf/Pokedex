@@ -1,10 +1,10 @@
-import React from 'react'
-import { Box,Percent,Svg,Number,Numero,Circle, Container,Title } from './style'
+import React from 'react';
+import { Box,Percent,Svg,Number,Circle, Container } from './style';
 
 const PointsBar = (props)=>{
     return(
         <Container>
-            <Title>{props.status}</Title>
+            <h1>{props.status}</h1>
         <Box>
             <Percent>
                 <Svg>
@@ -12,15 +12,15 @@ const PointsBar = (props)=>{
                     <Circle  number={props.number} cx='70' cy='70' r='70'></Circle>
                 </Svg>
                 <Number>
-                    <Numero>
+                    <h2>
                         {props.number}
-                    </Numero>
+                    </h2>
                 </Number>
             </Percent>
 
         </Box>
         </Container>
-    )
+    );
 }
 
-export default PointsBar
+export default PointsBar;
