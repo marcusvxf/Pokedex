@@ -22,4 +22,4 @@ export const Button = styled.a`
     &:hover{
         background-color:rgba(255, 140, 100, 1);
     }
-`
+`;
