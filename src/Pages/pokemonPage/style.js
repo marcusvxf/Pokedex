@@ -8,7 +8,7 @@ export const Wrapper = styled.div`
 `;
 
 
-export const ButtonPage = styled.div`
+export const HeaderPokemonPage = styled.div`
     display:flex;
     justify-content:space-between;
 
@@ -59,17 +59,4 @@ export const TypeBox = styled.div`
     color:white;
     padding-left:20px;
     margin-left:3rem;
-`;
-
-export const Nothing = styled.div`
-    display:flex;
-    justify-content: center;
-    margin-top:30vh;
-    align-items:center;
-    font-family: ${Theme.fonts.regular};
-    font-weight:800;
-    font-size:3rem;
-    text-transform:uppercase;
-    width:100vw
-
 `;

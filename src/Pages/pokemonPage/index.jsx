@@ -1,8 +1,8 @@
 import React ,{useContext, useEffect, useState} from 'react';
 import { firstContext } from '../../Store/store';
-import { Ball, Bar, Header,Sprite } from '../../components';
+import { Ball, Bar, Header,Sprite,Nothing } from '../../components';
 import {AiOutlineArrowRight} from 'react-icons/ai';
-import {Wrapper ,ButtonPage, Status, TypeBox, Nothing} from './style';
+import {Wrapper ,HeaderPokemonPage, Status, TypeBox} from './style';
 import { Button } from '../../components';
 
 
@@ -42,12 +42,12 @@ const PokemonPage = ()=>{
         return (
         <div>
             <Header />
-            <ButtonPage>
+            <HeaderPokemonPage>
                 <div>
                     <h2>Nome:{name} /  Index:{state.pokemon.id}</h2>
                 </div>
                 <Button page='cartas'>ir Para Cartas<AiOutlineArrowRight/></Button>
-            </ButtonPage>
+            </HeaderPokemonPage>
             <Wrapper>
                 <div>
                     <TypeBox>
