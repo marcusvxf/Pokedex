@@ -6,10 +6,10 @@ import { Search } from '../index';
 
 const HeaderBar = ()=>{
 
-    let history = useHistory()
+    let history = useHistory();
 
     const changePages = (page) =>{
-        history.push(`/${page}`)
+        history.push(`/${page}`);
     }
     return(
         <Header>
@@ -17,9 +17,9 @@ const HeaderBar = ()=>{
             <Button href="#"  onClick={()=> changePages('favorites')}><AiFillStar/><Span>Favoritos</Span></Button>
             <Search />
         </Header>
-    )
+    );
 
 }
 
 
-export default HeaderBar
+export default HeaderBar;

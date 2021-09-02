@@ -16,8 +16,8 @@ export const Buttonsbox = styled.div`
     width:20.5rem;
     border-radius:1rem;
 
-
 `;
+
 export const Button = styled.a`
     display:flex;
     justify-content:center;
