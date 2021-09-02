@@ -6,7 +6,7 @@ import Theme from '../../theme';
 const Wrapper = styled.div`
     display:flex;
     justify-content: center;
-    margin-top:30vh;
+    margin-top:${props=> props.margin};
     align-items:center;
     font-family: ${Theme.fonts.regular};
     font-weight:800;
@@ -18,7 +18,7 @@ const Wrapper = styled.div`
 
 const NothingFound = (props) =>{
     return(
-        <Wrapper>
+        <Wrapper margin={props.margin}>
             {props.children}
         </Wrapper>
 

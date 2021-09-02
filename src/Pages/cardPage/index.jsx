@@ -61,7 +61,7 @@ const CardPage = () =>{
     }
     return(
         <>
-        {state.def === true ? cardInfo() : <Nothing>Nemhum Card encontrado, procure outro nome</Nothing>}
+        {state.def === true ? cardInfo() : <Nothing margin='30vh'>Nemhum Card encontrado, procure outro nome</Nothing>}
         </>
     );
 }

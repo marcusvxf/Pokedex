@@ -1,5 +1,5 @@
 import React,{useState,useContext}  from 'react';
-import { SearchBox,Input,SearchButton } from './style';
+import { SearchBox} from './style';
 import { firstContext } from '../../Store/store';
 import {AiOutlineSearch} from 'react-icons/ai';
 import { useHistory,useLocation } from 'react-router-dom';
@@ -8,55 +8,55 @@ import {searchPoke, searchPokeCard} from '../../Store/actions/actionPokemon';
 
 const SearchBar = () => {
 
-    const [pokename,setPokename] = useState('')
+    const [pokename,setPokename] = useState('');
 
-    const {dispatch} = useContext(firstContext)
+    const {dispatch} = useContext(firstContext);
     
 
-    let history = useHistory()
+    let history = useHistory();
 
-    let location = useLocation()
+    let location = useLocation();
 
     function tratarEntrada(poke){
-        poke = poke.toLowerCase()
+        poke = poke.toLowerCase();
         if(poke === ""){
-            poke = 'none'
+            poke = 'none';
         }
         if (poke === 'mimikyu'){
-            poke = 'mimikyu-disguised'
+            poke = 'mimikyu-disguised';
         }else if(poke === 'minior'){
-            poke = 'minior-red-meteor'
+            poke = 'minior-red-meteor';
         }
 
-        return poke.replace(' ','-')
+        return poke.replace(' ','-');
     }
 
 
     const changePokemon = (e)=>{
         if(e.key === 'Enter'){
-            search()
+            search();
         }
     }
 
     const search = () => {
-        let pokeI = tratarEntrada(pokename)
-        searchPoke(dispatch,pokeI)
-        searchPokeCard(dispatch,pokeI)
+        let pokeI = tratarEntrada(pokename);
+        searchPoke(dispatch,pokeI);
+        searchPokeCard(dispatch,pokeI);
         if(location.pathname === '/cartas'){
-            history.push("/cartas")
+            history.push("/cartas");
         }else{
-            history.push("/pokemon")
+            history.push("/pokemon");
         }
 
     }
 
     return(
         <SearchBox>
-            <Input value={pokename} onKeyPress={changePokemon} onChange={(e) => setPokename(e.target.value) } placeholder='Escolha seu pokemon ...'></Input>
-            <SearchButton onClick={search} href='#'><AiOutlineSearch/></SearchButton>        
+            <input value={pokename} onKeyPress={changePokemon} onChange={(e) => setPokename(e.target.value) } placeholder='Escolha seu pokemon ...'></input>
+            <button onClick={search} href='#'><AiOutlineSearch/></button>        
         </SearchBox>
-    )
+    );
 
 }
 
-export default SearchBar
+export default SearchBar;

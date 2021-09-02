@@ -80,7 +80,7 @@ const PokemonPage = ()=>{
 
     return(
         <>
-        {state.def === true ? pokeInfo() : <Nothing>Nemhum pokemon encontrado com esse nome.</Nothing>}
+        {state.def === true ? pokeInfo() : <Nothing margin='30vh'>Nemhum pokemon encontrado com esse nome.</Nothing>}
         </>
     );
 }
