@@ -8,8 +8,7 @@ const api = axios.create({
 const apiCards = axios.create({
   baseURL: 'https://api.pokemontcg.io/v2/cards/',
   headers:{'x-api-key': process.env.REACT_APP_POKEMON_KEY}
-})
-console.log(process.env.REACT_APP_POKEMON_KEY)
+});
 
 
 export {api,apiCards};
