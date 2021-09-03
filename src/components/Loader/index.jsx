@@ -6,7 +6,7 @@ const Cloader = () =>{
     return(
         <Loader>
         </Loader>
-    )
+    );
 }
 
-export default Cloader
+export default Cloader;

@@ -1,7 +1,8 @@
 import styled from "styled-components";
+import Theme from "../../theme";
 
 export const Button = styled.a`
-    font-family: 'Helvetica Neue', sans-serif;
+    font-family: ${Theme.fonts.regular};
     font-weight: 800;
     font-size:18px;
     letter-spacing: 1px;
@@ -20,6 +21,6 @@ export const Button = styled.a`
     height:2.8rem;
 
     &:hover{
-        background-color:rgba(255, 140, 100, 1);
+        background-color: ${Theme.colors.primary};
     }
-`
+`;

@@ -7,12 +7,24 @@ const barLoading =keyframes`
     }100%{
         stroke-dashoffset:calc(440 - ( 440 * ${props =>parseInt( props.number,10)} ) / 150);
     }
-`
+`;
 
 export const Container = styled.div`
     display:inline-block;
-    margin-left:2.1vw
-`
+    margin-left:2.1vw;
+    h1{
+        text-transform:uppercase;
+        margin-left:1rem;
+        background-color:rgba(255, 140, 100, 1);
+        border-radius:2rem;
+        padding-left:7px;
+        font-size:22px;
+        width:9rem;
+        color:white;
+        font-family: 'Helvetica Neue', sans-serif;
+        border:1px solid black
+    }
+`;
 
 
 export const Box = styled.div`
@@ -20,10 +32,10 @@ export const Box = styled.div`
     width:10rem;
     height:10rem;
     justify-content:center;
-    align-tens:center;
+    align-items:center;
     flex-direction:column;
 
-` 
+`;
 
 export const Percent = styled.div`
     position:relative;
@@ -33,23 +45,28 @@ export const Percent = styled.div`
     width:10rem;
     height:10rem;
 
-` 
+`;
 
 export const Number = styled.div`
     position:absolute;
 
     display:flex;
     justify-content:center;
-    align-itens:center;
+    align-items:center;
     text-align:center;
-` 
+    h2{
+        margin-right:0.9rem;
+        margin-bottom:2rem;
+        font-size:32px;
+    }
+`;
 
 export const Svg = styled.svg`
     position:relative;
     width:10rem;
     height:10rem;
 
-`
+`;
 
 export const Circle = styled.circle`
     width:10rem;
@@ -71,13 +88,7 @@ export const Circle = styled.circle`
         stroke:red;
     }
 
-`
-
-export const Numero = styled.h2`
-    margin-right:0.9rem;
-    margin-bottom:2rem;
-    font-size:32px;
-`
+`;
 
 export const Title = styled.h2`
     text-transform:uppercase;

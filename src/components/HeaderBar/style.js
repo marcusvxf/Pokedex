@@ -1,8 +1,9 @@
 import styled from "styled-components";
+import Theme from "../../theme";
 
 
 export const Header = styled.div`
-    background-color: #FF8C64;
+    background-color: ${Theme.colors.primary};
     height:4rem;
     border-radius:3rem;
     align-items: center;
@@ -13,7 +14,7 @@ export const Header = styled.div`
     border: 2px solid black;
 
 
-`
+`;
 
 export const Button = styled.a`
     width:6.8rem;
@@ -35,7 +36,7 @@ export const Button = styled.a`
         padding: 10px;
 
     }
-`
+`;
 
 export const SearchBox = styled.div`
     background:#fff;
@@ -44,7 +45,7 @@ export const SearchBox = styled.div`
     justify-content:center;
     align-items:center;
 
-`
+`;
 
 
 export const Input = styled.input`
@@ -57,9 +58,9 @@ export const Input = styled.input`
     border:none;
     outline:none;
     font-size:1.3rem
-`
+`;
 
 export const Span = styled.h3`
-    font-family: 'Helvetica Neue', sans-serif;
+    font-family: ${Theme.fonts.regular};
 
-`
+`;

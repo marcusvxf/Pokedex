@@ -6,4 +6,5 @@ export {default as Bar } from './PointsBar';
 export {default as Card} from './FavoriteCard';
 export {default as Ball} from './DivBall';
 export {default as Sprite} from './DivSprite';
-export {default as Loader}  from './Loader'
+export {default as Loader}  from './Loader';
+export {default as Nothing} from './NothingFound';
