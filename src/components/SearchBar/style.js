@@ -26,6 +26,7 @@ export const SearchBox = styled.div`
         background:${Theme.colors.secondary};
         border: 0px;
         border-radius:0.6rem;
+        cursor: pointer;
     }
 
 `;
