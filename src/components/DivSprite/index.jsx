@@ -1,6 +1,6 @@
 import React, { useContext,useState,useEffect } from 'react';
 import { firstContext } from '../../Store/store';
-import { ContainerSprite,BallSprite,Sprite,ShinyButtom } from './style';
+import { ContainerSprite,ShinyButtom } from './style';
 
 
 const DivSprite = () =>{

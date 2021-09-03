@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { useHistory } from 'react-router-dom';
 import { firstContext } from '../../Store/store';
 import { searchPoke,searchPokeCard  } from '../../Store/actions/actionPokemon';
-import { Text,Container, Button } from './style';
+import { Container, Button } from './style';
 
 
 const FavoiteCard = (props) =>{
