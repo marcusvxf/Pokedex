@@ -13,7 +13,7 @@ export const Header = styled.div`
     justify-content: center;
     margin: 0rem 25vw 1rem 25vw;
     border: 2px solid black;
-    @media(max-width: 800px) {
+    @media(max-width: 922px) {
         margin: 1rem 0 1rem 0;
     }
 
