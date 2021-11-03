@@ -12,7 +12,7 @@ export const Display = styled.div`
     border-radius:0.6rem;
     background-color:white;
 `
-
+ 
 export const Title = styled.h2`
     font-family: 'Helvetica Neue', sans-serif;
     font-size: 40px; 
@@ -22,10 +22,14 @@ export const Title = styled.h2`
     padding:10px;
     margin:0em 0 0.5rem 2.4vw;
     border:2px solid black;
-    width:28rem;
+    width:50rem;
     text-align:center;
     border-radius: 2rem;
     background-color:rgba(255, 140, 100, 1);
+    @media(max-width:800px){
+        max-width: 80vw;
+
+    }
 
 `
 

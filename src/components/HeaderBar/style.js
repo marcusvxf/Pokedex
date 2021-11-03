@@ -11,6 +11,13 @@ export const Header = styled.div`
     padding-left:5rem;
     margin: 0rem 25vw 1rem 25vw;
     border: 2px solid black;
+    @media(max-width: 800px) {
+        flex-direction: column;
+        height: 13rem;
+        justify-content: center;
+        margin: 1rem 25vw;
+        padding-left: 0;
+    }
 
 
 `
