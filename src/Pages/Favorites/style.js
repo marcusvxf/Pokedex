@@ -27,5 +27,8 @@ export const Title = styled.h2`
     text-align:center;
     border-radius: 2rem;
     background-color:${Theme.colors.primary};
+    @media(max-width:800px){
+        max-width: 80vw;
+    }
 
 `;

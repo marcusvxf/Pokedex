@@ -5,19 +5,22 @@ import Theme from "../../theme";
 export const Header = styled.div`
     background-color: ${Theme.colors.primary};
     height:4rem;
-    border-radius:3rem;
-    align-items: center;
+    border-radius:1rem;
+
     display:flex;
     flex-direction:row;
-    padding-left:5rem;
+    align-items: center;
+    justify-content: center;
     margin: 0rem 25vw 1rem 25vw;
     border: 2px solid black;
+    @media(max-width: 800px) {
+        margin: 1rem 0 1rem 0;
+    }
 
 
 `;
 
 export const Button = styled.a`
-    width:6.8rem;
     display:flex;
     align-items:center;
     justify-content:center;
@@ -33,7 +36,7 @@ export const Button = styled.a`
         color:#fff;
         background: grey;
         border-radius: 3rem;
-        padding: 10px;
+     
 
     }
 `;
