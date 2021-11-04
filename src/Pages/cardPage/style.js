@@ -23,14 +23,23 @@ export const Display = styled.div`
     flex-wrap:wrap;
     justify-content: space-around;
     overflow-y: scroll;
-    height:75vh;
+    height:70vh;
     width:95vw;
-    margin-left:2.4vw;
     border:5px solid black;
     border-radius:0.6rem;
     background-color:white;
     padding-top:1rem;
+    @media(max-width:800px){
+        margin:0;
 
+    }
+
+`;
+
+export const Content = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 `;
 
 
@@ -40,7 +49,7 @@ export const HeaderCardPage = styled.div`
     justify-content:space-between;
     h2{
         font-family: 'Helvetica Neue', sans-serif;
-        font-size: 40px; 
+        font-size: 2em; 
         font-weight: 1000; 
         letter-spacing: 2px;
         color:white;
