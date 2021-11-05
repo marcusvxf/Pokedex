@@ -18,6 +18,14 @@ export const Ball = styled.div`
         max-height:15rem;
         max-width:17rem;
     }
+    @media(max-width:800px){
+        width: 20rem;
+        height: 20rem;
+        img{
+        max-height:12rem;
+        max-width:14rem;
+        }
+    }
 
 `;
 

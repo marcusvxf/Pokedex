@@ -10,7 +10,7 @@ export const Container = styled.div`
     border-radius:0.6rem;
     height:13rem;
     width:9rem;
-    margin: 2rem 0 2.4vw 2.4vw;
+    margin: 2rem 2.4vw 2.4vw 2.4vw;
     border: 2px solid black;
 
     h2{

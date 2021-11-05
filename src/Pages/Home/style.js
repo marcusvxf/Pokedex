@@ -19,8 +19,14 @@ export const Container = styled.div`
         font-family: ${Theme.fonts.regular};
         font-size:1.2rem;
         text-transform:uppercase;
-        margin:-4rem;
+        margin:0;
         text-align:center;
-        width:60rem
+    }
+
+    @media(max-width: 800px) {
+        padding: 2rem;
+        h1{
+            font-size:4rem;
+        }
     }
 `;

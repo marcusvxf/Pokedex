@@ -1,7 +1,7 @@
 import React,{useContext,useEffect} from 'react';
 import { firstContext } from '../../Store/store';
 import { searchPokeCard } from '../../Store/actions/actionPokemon';
-import { Image,Constainer, Display ,HeaderCardPage} from '../cardPage/style';
+import { Image,Constainer, Display ,HeaderCardPage,Content} from '../cardPage/style';
 import {Button, Header, Loader, Nothing } from '../../components';
 import {AiOutlineArrowRight} from 'react-icons/ai';
 
@@ -41,6 +41,7 @@ const CardPage = () =>{
                         <Button page='pokemon'>ir Para Pokemon<AiOutlineArrowRight/></Button>
                     </HeaderCardPage>
                 </div>
+                <Content>
                 <Display>
                     {state.cards.length >0? 
                         <>
@@ -56,6 +57,7 @@ const CardPage = () =>{
                         </>
                     :<Loader/>}
                 </Display>
+                </Content>
             </div>
         );
     }
