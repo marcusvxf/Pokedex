@@ -15,7 +15,7 @@ const Favorite = ()=>{
     }
     return(
         <>
-            <Title>Pokemons Favoritos</Title>
+            <Title>Favoritos</Title>
             <Display>
                 {state.favorites.length > 0 ? state.favorites.map((pokemon)=> pokemonCard(pokemon)):<Nothing> você Não salvou nada ainda, pesquise um nome ou numero.</Nothing>}
             </Display>

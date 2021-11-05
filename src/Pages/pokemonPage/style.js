@@ -5,6 +5,13 @@ export const Wrapper = styled.div`
     display:flex;
     justify-content:space-around;
     margin-left:3rem;
+    @media(max-width:1133px){
+        flex-direction: column;
+        margin-left: 0;
+        justify-content: center;
+
+
+    }
 `;
 
 
@@ -34,6 +41,16 @@ export const HeaderPokemonPage = styled.div`
             height:2.8rem;
             text-transform:uppercase;
         }
+
+    }
+    @media(max-width:1133px){
+           flex-direction: column-reverse;
+           div{
+                h2{
+                font-size: 15px;
+            }
+           }
+
     }
 `;
 
@@ -43,6 +60,12 @@ export const Status = styled.div`
     flex-wrap:wrap;
     justify-content: space-between;
     width:33vw;
+    @media(max-width:1133px){
+        justify-content: center;
+        width: 90vw;
+        align-items: center;
+
+    }
 
 `;
 
@@ -59,4 +82,19 @@ export const TypeBox = styled.div`
     color:white;
     padding-left:20px;
     margin-left:3rem;
+    @media(max-width:1133px){
+      margin-left: 0.5rem;
+
+    }
+`;
+
+export const Images = styled.div`
+    @media(max-width:1133px){
+        display: flex;
+        width: 100vw;
+        align-items: center;
+        justify-content: center;
+    }
+
+
 `;

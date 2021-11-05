@@ -2,7 +2,7 @@ import React ,{useContext, useEffect, useState} from 'react';
 import { firstContext } from '../../Store/store';
 import { Ball, Bar, Header,Sprite,Nothing } from '../../components';
 import {AiOutlineArrowRight} from 'react-icons/ai';
-import {Wrapper ,HeaderPokemonPage, Status, TypeBox} from './style';
+import {Wrapper ,HeaderPokemonPage, Status, TypeBox,Images} from './style';
 import { Button } from '../../components';
 
 
@@ -68,10 +68,10 @@ const PokemonPage = ()=>{
                     </Status>
 
                 </div>
-                <div>
+                <Images>
                     <Ball/>
                     <Sprite/>
-                </div>
+                </Images>
             </Wrapper>
         </div> 
         

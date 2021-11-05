@@ -14,6 +14,7 @@ export const Display = styled.div`
     background-color:white;
     @media(max-width:800px){
         justify-content: space-around;
+
         margin:0.5em;
     }
 `;
