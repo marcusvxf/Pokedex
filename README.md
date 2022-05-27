@@ -1,4 +1,4 @@
-# Projeto pokemon por Marcusvxf
+# Pokedex por Marcusvxf
 Você pode encontrar o projeto aqui https://dazzling-pasteur-83d6d7.netlify.app/.
 
 Ola este um projeto pessoal utilizando:
